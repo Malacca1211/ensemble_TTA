@@ -1,0 +1,166 @@
+Lr: 0.1  dp: 0.3  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.0  Error: 22.78%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.0  Error: 23.36%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.0  Error: 22.78%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.0  Error: 23.49%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.0  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.1  Error: 23.23%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.1  Error: 23.80%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.1  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.1  Error: 22.78%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.1  Error: 22.78%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.2  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.2  Error: 23.14%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.2  Error: 22.78%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.2  Error: 23.36%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.2  Error: 23.41%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.3  Error: 22.78%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.3  Error: 23.49%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.3  Error: 22.78%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.3  Error: 23.25%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.3  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.4  Error: 23.25%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.4  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.4  Error: 22.78%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.4  Error: 22.96%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.4  Error: 22.78%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.5  Error: 22.78%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.5  Error: 23.25%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.5  Error: 22.78%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.5  Error: 23.25%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.5  Error: 23.19%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.6  Error: 23.79%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.6  Error: 22.78%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.6  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.6  Error: 23.14%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.6  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.7  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.7  Error: 23.80%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.7  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.7  Error: 23.65%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.7  Error: 23.36%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.8  Error: 22.78%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.8  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.8  Error: 23.19%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.8  Error: 23.41%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.8  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.9  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.9  Error: 23.65%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.9  Error: 24.21%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.9  Error: 23.91%
+
+Lr: 0.1  dp: 0.3  InferDp: 0.9  Error: 23.25%
+
+OutputLast: tent
+
+OutputLast: norm
+
+
+source outputLast:
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 88.13%
+
+source Output1:
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 88.94%
+
+source Output2:
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 90.00%
+
+source Output3:
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 88.04%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 90.00%
+
+norm OutputLast:
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 69.39%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 27.89%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 89.65%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 87.67%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 27.72%
+
+
+tent output3:
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 26.76%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 24.44%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 26.76%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 24.44%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 25.68%
+
+tent output2:
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 83.59%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 83.59%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 83.58%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 83.59%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 83.59%
+
+tent output1:
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 89.92%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 89.92%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 89.92%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 89.92%
+
+Lr: 0.1  dp: 0.3  InferDp: 0  Error: 89.92%
