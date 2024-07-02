@@ -1,10 +1,10 @@
 MODEL:
-  ADAPTATION: norm
+  ADAPTATION: norm #source 无操作 tent:最小化熵 norm:BN 
   ARCH: Standard
 TEST:
-  BATCH_SIZE: 128
+  BATCH_SIZE: 128 #一般128 有时有64/100
 CORRUPTION:
-  DATASET: cifar100
+  DATASET: cifar100 # 不用改
   SEVERITY:
     - 5
     # - 4

@@ -89,7 +89,7 @@ parser.add_argument('--dp', type=float, default=0, help='')
 parser.add_argument('--InferT', type=int, default=10, help='')
 parser.add_argument('--thredhold', type=float, default=2, help='')
 parser.add_argument('--UseInfer', type=float, default=2, help='')
-parser.add_argument('--tentLr', type=float, default=2.7e-04, help='')
+parser.add_argument('--tentLr', type=float, default=2.7e-04, help='')# tent学习率
 parser.add_argument("--weights", type=parse_weights, help="Array of weights [w1, w2, ..., wn]")
 parser.add_argument('--interOuts', type=int, default=0, help='')
 parser.add_argument('--widen_factor', type=int, help='widen factor', default=1)
