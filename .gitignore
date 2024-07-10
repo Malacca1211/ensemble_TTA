@@ -1,0 +1,8 @@
+checkpoint/*
+data/*
+finetune/*
+runs/*
+logs/*
+tensorLog/*
+results_resemble/*
+*.pyc

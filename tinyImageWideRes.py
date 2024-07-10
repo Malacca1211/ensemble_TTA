@@ -105,6 +105,7 @@ parser.add_argument('--times', type=int, nargs='+')
 args = parser.parse_args()
 state = {k: v for k, v in args._get_kwargs()}
 
+
 # Validate dataset
 
 # Use CUDA
@@ -145,6 +146,10 @@ def main():
     global best_epoch
     best_epoch = 0
     start_epoch = args.start_epoch  # start from epoch 0 or last checkpoint epoch
+
+    # Set CUDA visible devices
+    os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu_id
+    use_cuda = torch.cuda.is_available()
 
     args.checkpoint = f'{args.checkpoint}/{args.dataset}/{args.arch}_w{args.widen_factor}'
     if args.arch.startswith('cornet'):
@@ -262,7 +267,7 @@ def main():
     # Resume
     title = 'tinyImageNet-100-' + args.arch
 
-    # args.resume = 'checkpoint/tinyImagenet/wideResnet_SDN_w6/SGD/bs128_lr0.2_wd0.0005StepLR_60_0.1/seed_21/finetuneResout0/Wide6/addIc_b1-b3ResOut/checkpoint_.pth.tar'
+    # args.resume = '/home/xietong/ensemble_TTA/checkpoint/tinyImagenet/wideResnet_SDN_w10/SGD/bs128_lr0.00025_wd0.0005StepLR_60_0.1/seed_26/finetuneResout0/Wide10/addIc_b1-b3ResOut/checkpoint_.pth.tar'
     if args.resume:
         # Load checkpoint.
         print('==> Resuming from checkpoint..')

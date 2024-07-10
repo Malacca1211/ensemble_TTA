@@ -45,8 +45,8 @@ def load_singleRes56SDNmodel(model_path):
         #     checkpoint = torch.load(ckpt_path)
         # except:
         raise Exception(f'No such file! \n {ckpt_path}')
-    model.load_state_dict(checkpoint['state_dict'])
-    model = model.to('cuda')  # 将模型移动到GPU
+    model = model.to('cuda')
+    model.load_state_dict(checkpoint['state_dict'], False)
     return model
 
 def load_singleWideRes26SDNmodel(model_path):
@@ -65,18 +65,21 @@ def load_singleWideRes26SDNmodel(model_path):
         #     checkpoint = torch.load(ckpt_path)
         # except:
         raise Exception(f'No such file! \n {ckpt_path}')
-    
+
+    model = model.to('cuda')
+    # Move the model to GPU before loading the state_dict
+
     # Remove 'module.' prefix from keys in state_dict
     state_dict = checkpoint['state_dict']
     new_state_dict = {}
-    for k, v in state_dict.items():
-        if k.startswith('module.'):
-            new_state_dict[k[7:]] = v  # remove `module.` prefix
-        else:
-            new_state_dict[k] = v
+    # for k, v in state_dict.items():
+    #     if k.startswith('module.'):
+    #         new_state_dict[k[7:]] = v  # remove `module.` prefix
+    #     else:
+    #         new_state_dict[k] = v
 
     model.load_state_dict(checkpoint['state_dict'], False)
-    model = model.to('cuda')  # 将模型移动到GPU
+    model = model.to('cuda')
     return model
 
 def trainOnePhase(model, train_loader, test_loader, criterion, outputIndex):
@@ -147,14 +150,16 @@ def trainOnePhase(model, train_loader, test_loader, criterion, outputIndex):
                         m.eval()
                         countMainBn+=1
 
-        if hasattr(model, 'bn1') and model.bn1 is not None:
-            m = model.bn1
-            if isinstance(m, nn.BatchNorm2d):
-                m.eval()
+        for module in model.modules():
+            if module.module.bn1 is not None:
+                m = module.module.bn1
+                if isinstance(m, nn.BatchNorm2d):
+                    m.eval()
+                    break
 
         for i, data in enumerate(train_loader, 0):
             inputs, targets = data
-            inputs, targets = inputs.to('cuda'), targets.to('cuda')
+            inputs, targets = inputs.cuda(), targets.cuda(non_blocking=True)
             optimizer.zero_grad()
             outputs = model(inputs)
             weighted_outputs = outputs[outputIndex-1] * 1
@@ -192,6 +197,7 @@ def trainOnePhase(model, train_loader, test_loader, criterion, outputIndex):
 
             }, epoch + 1, outputIndex, best_accuracy, checkpoint=checkpoint)
 
+
 def mkdir_p(path):
     '''make dir if not exist'''
     try:
@@ -214,7 +220,7 @@ def test(model, test_loader):
     with torch.no_grad():
         for data in test_loader:
             inputs, targets = data
-            inputs, targets = inputs.to('cuda'), targets.to('cuda')
+            inputs, targets = inputs.to('cuda'), targets.cuda(non_blocking=True)
             outputs = model(inputs)
             for i, output in enumerate(outputs):
                 _, predicted = torch.max(output, 1)
@@ -301,8 +307,8 @@ def load_singleRes56SDNFinetunemodel(model_path):
         #     checkpoint = torch.load(ckpt_path)
         # except:
         raise Exception(f'No such file! \n {model_path}')
-    model.load_state_dict(checkpoint['state_dict'])
-    model = model.to('cuda')  # 将模型移动到GPU
+    model = model.to('cuda')
+    model.load_state_dict(checkpoint['state_dict'], False)
     return model
 
 def load_singleWideRes26SDNFinetuneModel(model_path):
@@ -320,8 +326,8 @@ def load_singleWideRes26SDNFinetuneModel(model_path):
         #     checkpoint = torch.load(ckpt_path)
         # except:
         raise Exception(f'No such file! \n {model_path}')
-    model.load_state_dict(checkpoint['state_dict'])
-    model = model.to('cuda')  # 将模型移动到GPU
+    model = model.to('cuda')
+    model.load_state_dict(checkpoint['state_dict'], False)
     return model
 
 def getAddIc(str):

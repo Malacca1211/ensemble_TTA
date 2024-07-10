@@ -53,9 +53,11 @@
 
 #python finetuneWideResCifar100.py  --model_path 'checkpoint/cifar100/wideResnet_SDN_w8/SGD/bs128_lr0.2_wd0.0005StepLR_60_0.1/seed_20/finetuneResout0/Wide8/addIc_b1-b3ResOut' --interOuts 0 --widen_factor 8 --epochs 20 --lr 0.2  --seed 20
 #python finetuneWideResCifar100.py  --model_path 'checkpoint/cifar100/wideResnet_SDN_w9/SGD/bs128_lr0.2_wd0.0005StepLR_60_0.1/seed_20/finetuneResout0/Wide9/addIc_b1-b3ResOut' --interOuts 0 --widen_factor 9 --epochs 20 --lr 0.2  --seed 20
-
-python finetuneWideResTinyImage.py  --model_path 'checkpoint/tinyImagenet/wideResnet_SDN_w10/SGD/bs128_lr0.2_wd0.0005StepLR_60_0.1/seed_20/finetuneResout0/Wide10/addIc_b1-b3ResOut' --interOuts 0 --widen_factor 10 --epochs 20 --lr 0.2  --seed 20
-
+#python finetuneWideResTinyImage.py --gpu-id 0 --model_path '/home/xietong/ensemble_TTA/checkpoint/tinyImagenet/wideResnet_SDN_w10/SGD/bs128_lr0.1_wd0.0005StepLR_60_0.1/seed_26/finetuneResout0/Wide10/addIc_b1-b3ResOut' --interOuts 0 --widen_factor 10 --epochs 30 --lr 0.2  --seed 20
+#python finetuneWideResTinyImage.py --gpu-id 1 --model_path '/home/xietong/ensemble_TTA/checkpoint/tinyImagenet/wideResnet_SDN_w10/SGD/bs128_lr0.1_wd0.0005StepLR_60_0.1/seed_26/finetuneResout0/Wide10/addIc_b1-b3ResOut' --interOuts 0 --widen_factor 10 --epochs 20 --lr 0.1  --seed 20
+#python finetuneWideResTinyImage.py --gpu-id 2 --model_path '/home/xietong/ensemble_TTA/checkpoint/tinyImagenet/wideResnet_SDN_w10/SGD/bs128_lr0.1_wd0.0005StepLR_60_0.1/seed_26/finetuneResout0/Wide10/addIc_b1-b3ResOut' --interOuts 0 --widen_factor 10 --epochs 30 --lr 0.1  --seed 20
+python finetuneWideResTinyImage.py --gpu-id 3 --model_path '/home/xietong/ensemble_TTA/checkpoint/tinyImagenet/wideResnet_SDN_w10/SGD/bs128_lr0.1_wd0.0005StepLR_60_0.1/seed_26/finetuneResout0/Wide10/addIc_b1-b3ResOut' --interOuts 0 --widen_factor 10 --epochs 40 --lr 0.2  --seed 20
+#python finetuneWideResTinyImage.py  --model_path '/home/xietong/ensemble_TTA/checkpoint/tinyImagenet/wideResnet_SDN_w10/SGD/bs128_lr0.1_wd0.0005StepLR_60_0.1/seed_26/finetuneResout0/Wide10/addIc_b1-b3ResOut' --interOuts 0 --widen_factor 10 --epochs 20 --lr 0.2  --seed 20
 #python finetuneWideResCifar100.py  --model_path 'checkpoint/cifar100/wideResnet_SDN_w10/SGD/bs128_lr0.2_wd0.0005StepLR_60_0.1/seed_21/finetuneResout0/Wide10/addIc_b1-b3ResOut' --interOuts 0 --widen_factor 10 --epochs 20 --lr 0.1  --seed 21
 
 

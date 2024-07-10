@@ -91,8 +91,11 @@
 #python tinyImageWideRes.py --lr 0.2 --epoch 200  --manualSeed 20  --step_size 60 --widen_factor 10
 #python tinyImageWideRes.py --lr 0.2 --epoch 200  --manualSeed 21  --step_size 60 --widen_factor 1
 #python tinyImageWideRes.py --lr 0.2 --epoch 200  --manualSeed 22  --step_size 60 --widen_factor 1
-python tinyImageWideRes.py --lr 0.2 --epoch 200  --manualSeed 26  --step_size 60 --widen_factor 1 #数据增强和TEA一样
-
+#python tinyImageWideRes.py --lr 0.2 --epoch 200  --manualSeed 26  --step_size 60 --widen_factor 1 #数据增强和TEA一样
+#python tinyImageWideRes.py --gpu-id 0 --train-batch 128 --lr 0.1 --epoch 200  --manualSeed 26  --step_size 60 --widen_factor 10 #指定gpu
+#python tinyImageWideRes.py --gpu-id 1 --train-batch 64 --lr 0.00025 --epoch 200  --manualSeed 26  --step_size 60 --widen_factor 10 #指定gpu
+python tinyImageWideRes.py --gpu-id 1 --train-batch 128 --lr 0.00025 --epoch 200  --manualSeed 26  --step_size 60 --widen_factor 10 #指定gpu
+#python tinyImageWideRes.py --train-batch 1000 --lr 0.1 --epoch 200  --manualSeed 26  --step_size 60 --widen_factor 10 #超参数和TEA对齐
 #python tinyImageWideRes.py --lr 0.2 --epoch 200  --manualSeed 20  --step_size 60 --widen_factor 6
 #python tinyImageWideRes.py --lr 0.2 --epoch 200  --manualSeed 21  --step_size 60 --widen_factor 6
 #python finetuneWideResTinyImage.py  --model_path 'checkpoint/tinyImagenet/wideResnet_SDN_w6/SGD/bs128_lr0.2_wd0.0005StepLR_60_0.1/seed_20/finetuneResout0/Wide6/addIc_b1-b3ResOut' --interOuts 0 --widen_factor 6 --epochs 20 --lr 0.2  --seed 20 --step 10
